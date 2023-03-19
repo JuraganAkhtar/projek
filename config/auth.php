@@ -18,6 +18,11 @@ return [
         'passwords' => 'users',
     ],
 
+    'defaults' => [
+        'guard' => 'petugas',
+        'passwords' => 'petugas',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -36,9 +41,14 @@ return [
     */
 
     'guards' => [
-        'web' => [
+        'users' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],
+
+        'petugas' => [
+            'driver' => 'session',
+            'provider' => 'petugas ',
         ],
     ],
 
@@ -65,10 +75,10 @@ return [
             'model' => App\Models\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'petugas' => [
+            'driver' => 'database',
+            'table' => App\Models\Petugas::class,,
+        ],
     ],
 
     /*
@@ -89,6 +99,13 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'petugas' => [
+            'provider' => 'petugas',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

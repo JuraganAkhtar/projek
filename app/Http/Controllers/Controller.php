@@ -63,8 +63,10 @@ class Controller extends BaseController
     public function gas(Request $asup){
         if (auth()->attempt(['username' => $asup->username, 'password' => $asup->password])) {
             $asup->session()->regenerate();
-
             return redirect('/redirect');
+        elseif(auth()->attempt(['username' => $asup->username, 'password' => $asup->password])){
+            $asup->session()->regenerate();
+            }
         }
         return back()->with('loginerror', 'Gagal Masuk');
     }
