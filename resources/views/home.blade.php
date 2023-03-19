@@ -7,7 +7,7 @@
         <img src="img/landing.png"  style="height:400px;" class="justify-content-start img-fluid" srcset="">
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-6 pt-5 pb-5 " style=" font-family:comic sans ms; font-size:50px; background-color:#f5f5f5">
-         <p> PELAYANAN PENGADUAN MASYARAKAT</p>
+         <p> PELAYANAN PENGADUAN </p>
          <h6>Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang</h6>
          <a href="#mulai" class="btn  col-2" style="background-color:darkgray; ">mulai</a>
         </div>
